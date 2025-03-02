@@ -1,0 +1,5 @@
+# Shopping List
+# Format: path<TAB>name<TAB>scale
+
+Matplanering/2026-11.menu	2026-11	1
+Bröd/Foccacia.cook	Foccacia	1
