@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import "./src/styles/global.css"
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const allBreadRecipes: CollectionEntry<'bread'> = await getCollection('bread')
+console.log(allBreadRecipes)
+---
+
+<BaseLayout title="Bakning">
+    <h1>Bakning</h1>
+    <div>
+        {allBreadRecipes.map(recipe => (
+            <div>
+                <h2>{ recipe.title }</h2>
+            </div>
+        ))}
+    </div>
+</BaseLayout>
